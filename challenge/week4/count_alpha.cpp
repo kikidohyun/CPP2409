@@ -10,6 +10,8 @@ int main(){
 
     char ch;
     while(cin>>ch){
+
+            
         if(ch<'a'|| ch>'z'){
             cout <<"잘못 입력하셨습니다."<<endl;
             continue;
