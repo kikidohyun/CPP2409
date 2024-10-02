@@ -120,6 +120,7 @@ int main(){
         for(y=0;y<numCell;y++){
            if (board[x][y]==' '){
             check=1;
+            break;
            }
            
         }
