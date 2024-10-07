@@ -8,7 +8,8 @@
                 "-fdiagnostics-color=always",
                 "-std=c++14",
                 "-g",
-                "${file}",
+               // "${file}",:열려있는 파일만 컴파일 하겠다
+                "${fileDirname}\\**.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
