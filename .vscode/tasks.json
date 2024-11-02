@@ -8,7 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-std=c++14",
                 "-g",
-               // "${file}",
+                //"${file}",
                 "${fileDirname}\\**.cpp",// : 파일 전체를 컴파일 하겠다
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
