@@ -2,6 +2,7 @@
 #include <string>
 #include "user.h"
 using namespace std;
+#include <vector>
 
 // 이동하려는 곳이 유효한 좌표인지 체크하는 함수
 bool User::checkXY(User &user_A,int mapX, int mapY){
@@ -12,7 +13,7 @@ bool User::checkXY(User &user_A,int mapX, int mapY){
 	return checkFlag;
 }
 // 유저의 위치가 목적지인지 체크하는 함수
-bool User::checkGoal(User &user_A,int map[][5]){
+bool User::checkGoal(User &user_A,vector<vector<int>> &map){
     // 목적지 도착하면
 	if (map[user_A.user_y][user_A.user_x] == 4) {
 		return true;
@@ -20,7 +21,7 @@ bool User::checkGoal(User &user_A,int map[][5]){
 	return false;
 }
 
-void User::checkState(User &user_A,int map[][5]){
+void User::checkState(User &user_A,vector<vector<int>> &map){
 	if(map[user_A.user_y][user_A.user_x]==1){
 		cout << "{아이템}이 있습니다."<<endl;
 	}
