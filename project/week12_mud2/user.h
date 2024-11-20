@@ -28,5 +28,26 @@ public:
 		os << "현재 HP는 {" << v.hp<< "}이고, 먹은 아이템은 총 {"<<v.itemCnt<<"}개 입니다"<< endl;
 		return os;
 	}
+	void DoAttack(){cout<<"공격합니다"<<endl;}
 
+};
+
+class Magician : public User
+{
+public:
+	void DoAttack()
+	{
+		User::DoAttack();
+		cout << "마법 사용" << endl;
+	}
+};
+
+class Warrior : public User
+{
+public:
+	void DoAttack()
+	{
+		User::DoAttack();
+		cout << "베기 사용" << endl;
+	}
 };
