@@ -63,7 +63,7 @@ int main() {
 			cout << "현재  HP는 " << user_A->GetHP() << "입니다." << endl;
 			cout << "명령어를 입력하세요 (up,down,left,right,map,end,information): ";
 			cin >> user_input;	
-
+		try{
 			if (user_input == "up")
 			{
 				// 위로 한 칸 올라가기
@@ -100,9 +100,14 @@ int main() {
 			}
 			else
 			{
-				cout << "잘못된 입력입니다." << endl;
+				throw runtime_error("잘못된 입력입니다.");
 				continue;
 			}
+		}
+		catch(runtime_error& e)
+		{
+			cout<<"에러: "<<e.what();
+		}
 			if (!user_A->CheckUser(user_A))
 			{
 				cout << "실패";
